@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting start &mdash; Dorsa Database v0.0.1 documentation</title>
+  <title>Getting start &mdash; Dorsa Database 0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Collector Class Functions" href="Database_src.html" />
+    <link rel="next" title="Camera Emulation" href="create_schema.html" />
     <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
@@ -52,10 +52,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#step-1-create-database-object">step 1: Create Database Object</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="create_schema.html">Camera Emulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="search.html">Search Page</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">sources:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Database_src.html">Collector Class Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Camera_src.html">Dtabase Functions and atribiutes</a></li>
 </ul>
 
         </div>
@@ -86,16 +88,14 @@
 <h1>Getting start<a class="headerlink" href="#getting-start" title="Permalink to this heading"></a></h1>
 <section id="step-1-create-database-object">
 <h2>step 1: Create Database Object<a class="headerlink" href="#step-1-create-database-object" title="Permalink to this heading"></a></h2>
-<p>You can manage cameras using Collector class . Use <code class="docutils literal notranslate"><span class="pre">get_all_cameras</span></code> function to get all connected cameras.
-for more information see chapter <span class="xref std std-doc">manageـdeviceـbyـCollector</span></p>
+<p>first create an object from dorsa_database with your sql username and password for create connection and set your database naem.
+if there is not schema this schema name , code will create it automatic.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
 <span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">database</span>
 
 <span class="n">db</span><span class="o">=</span><span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name__&#39;</span><span class="p">,</span><span class="s1">&#39;__password__&#39;</span><span class="p">,</span><span class="s1">&#39;__host__&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
 
 <span class="c1">#-----------------------------------------------------------------</span>
-<span class="c1">#get all avialble cameras</span>
-<span class="n">all_cameras</span> <span class="o">=</span> <span class="n">collector</span><span class="o">.</span><span class="n">get_all_cameras</span><span class="p">(</span><span class="n">camera_class</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -106,13 +106,13 @@ for more information see chapter <span class="xref std std-doc">manageـdeviceـ
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Database_src.html" class="btn btn-neutral float-right" title="Collector Class Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="create_schema.html" class="btn btn-neutral float-right" title="Camera Emulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Milad_mlj22.</p>
+    <p>&#169; Copyright 2023, Milad Moltaji (milad_mlj22).</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

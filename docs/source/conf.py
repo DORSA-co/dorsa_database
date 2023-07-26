@@ -6,13 +6,11 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+
 project = 'Dorsa Database'
-copyright = '2023, Milad_mlj22'
-author = 'Milad Moltaji (milad_mlj22)'
-release = 'v0.0.1'
-
-
-
+copyright = '2023, Milad Moltaji (milad_mlj22)'
+author = 'Milad Moltaji'
+release = '0.1'
 
 
 import os

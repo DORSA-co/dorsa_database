@@ -3,13 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Collector Class Functions
+Dtabase Functions and atribiutes
 ===========================================
 
-.. currentmodule:: dorsaPylon
-.. autoclass:: dorsaPylon.Collector
+.. currentmodule:: dorsa_Database
+.. autoclass:: dorsa_Database.dataBase
    :members:
 
-.. currentmodule: dorsa_Database
-.. autoclass:dorsa_Database.dataBase
-   :members:

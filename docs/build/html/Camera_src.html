@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dtabase Functions and atribiutes &mdash; Dorsa Database 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Dorsa Database
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">subjects:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_start.html">Getting start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="search.html">Search Page</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">sources:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dtabase Functions and atribiutes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dorsa_Database.dataBase"><code class="docutils literal notranslate"><span class="pre">dataBase</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.add_column"><code class="docutils literal notranslate"><span class="pre">dataBase.add_column()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.add_record"><code class="docutils literal notranslate"><span class="pre">dataBase.add_record()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.add_record_dict"><code class="docutils literal notranslate"><span class="pre">dataBase.add_record_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.check_column_exist"><code class="docutils literal notranslate"><span class="pre">dataBase.check_column_exist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.check_connection"><code class="docutils literal notranslate"><span class="pre">dataBase.check_connection()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.check_table_exist"><code class="docutils literal notranslate"><span class="pre">dataBase.check_table_exist()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.connect"><code class="docutils literal notranslate"><span class="pre">dataBase.connect()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.create_schema"><code class="docutils literal notranslate"><span class="pre">dataBase.create_schema()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.create_table"><code class="docutils literal notranslate"><span class="pre">dataBase.create_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.delete_column"><code class="docutils literal notranslate"><span class="pre">dataBase.delete_column()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.delete_table"><code class="docutils literal notranslate"><span class="pre">dataBase.delete_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.get_all_content"><code class="docutils literal notranslate"><span class="pre">dataBase.get_all_content()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.get_all_schemas"><code class="docutils literal notranslate"><span class="pre">dataBase.get_all_schemas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.get_auto_increment_col_name"><code class="docutils literal notranslate"><span class="pre">dataBase.get_auto_increment_col_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.get_col_name"><code class="docutils literal notranslate"><span class="pre">dataBase.get_col_name()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.get_count_table"><code class="docutils literal notranslate"><span class="pre">dataBase.get_count_table()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.remove_record"><code class="docutils literal notranslate"><span class="pre">dataBase.remove_record()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.search"><code class="docutils literal notranslate"><span class="pre">dataBase.search()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.set_log_level"><code class="docutils literal notranslate"><span class="pre">dataBase.set_log_level()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.show_message"><code class="docutils literal notranslate"><span class="pre">dataBase.show_message()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.update_record"><code class="docutils literal notranslate"><span class="pre">dataBase.update_record()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dorsa_Database.dataBase.update_record_dict"><code class="docutils literal notranslate"><span class="pre">dataBase.update_record_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dorsa Database</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Dtabase Functions and atribiutes</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Camera_src.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dtabase-functions-and-atribiutes">
+<h1>Dtabase Functions and atribiutes<a class="headerlink" href="#dtabase-functions-and-atribiutes" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dorsa_Database.</span></span><span class="sig-name descname"><span class="pre">dataBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase" title="Permalink to this definition"></a></dt>
+<dd><p>this class used to create connection and do some functions such as : add , delete , create , etc</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.add_column">
+<span class="sig-name descname"><span class="pre">add_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">len</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">255</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Null</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NULL'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AI</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unique</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.add_column" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new column to the specified table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table to add the column to.</p></li>
+<li><p><strong>col_name</strong> (<em>str</em>) – The name of the column to add.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The data type of the column.</p></li>
+<li><p><strong>len</strong> (<em>int</em>) – Optional. The length of the column if the data type is VARCHAR. Default is 255.</p></li>
+<li><p><strong>Null</strong> (<em>str</em>) – Optional. The NULL constraint for the column. Default is NULL.</p></li>
+<li><p><strong>AI</strong> (<em>bool</em>) – Optional. If True, the column has the AUTO_INCREMENT property. Default is False.</p></li>
+<li><p><strong>default</strong> (<em>Any</em>) – Optional. The default value for the column. Default is an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the column was successfully added, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To add a column named ‘email’ with data type VARCHAR(50) to a table named ‘users’, you can call the function like this:</dt><dd><p>add_column(‘users’, ‘email’, ‘VARCHAR’, len=50)</p>
+</dd>
+</dl>
+<p>This will add the ‘email’ column with the specified data type and length to the ‘users’ table.</p>
+<p>You can specify additional parameters such as Null, AI, and default value for the column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.add_record">
+<span class="sig-name descname"><span class="pre">add_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.add_record" title="Permalink to this definition"></a></dt>
+<dd><p>this function is used to add a new record to table</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><p>table_name : name of table
+data: data that want to add to the database</p>
+</dd>
+</dl>
+<p>Returns: Flag of doing query</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.add_record_dict">
+<span class="sig-name descname"><span class="pre">add_record_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.add_record_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new record to the specified database table using a dictionary of column-value pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table where the record will be added.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – A dictionary containing column names as keys and their corresponding values
+for the new record to be inserted into the table.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p>This method takes the input <cite>data</cite> dictionary, extracts the values corresponding to the columns
+of the specified <cite>table_name</cite>, and then adds a new record to the table using the <cite>add_record</cite> method.</p>
+<p>The <cite>add_record</cite> method is assumed to be defined elsewhere and is responsible for executing the
+actual database insertion operation.</p>
+<p>Example usage:
+data = {‘column1’: ‘value1’, ‘column2’: ‘value2’, ‘column3’: 42}
+add_record_dict(‘my_table’, data)</p>
+<p>Note:
+- Make sure to handle the connection to the database and the cursor outside of this method.
+- Ensure that the <cite>add_record</cite> method is implemented to perform the actual database insertion.
+- This method assumes that the keys in the <cite>data</cite> dictionary correspond to the column names in the table.
+It is the caller’s responsibility to ensure the dictionary contains the correct column names and values.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.check_column_exist">
+<span class="sig-name descname"><span class="pre">check_column_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.check_column_exist" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if the specified column exists in the given table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table to check.</p></li>
+<li><p><strong>col_name</strong> (<em>str</em>) – The name of the column to check.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the column exists in the table, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To check if a column named ‘email’ exists in a table named ‘users’, you can call the function like this:</dt><dd><p>check_column_exist(‘users’, ‘email’)</p>
+</dd>
+</dl>
+<p>This will return True if the ‘email’ column exists in the ‘users’ table, or False if it does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.check_connection">
+<span class="sig-name descname"><span class="pre">check_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.check_connection" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the connection to the database can be established.</p>
+<p>Inputs: None</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A boolean value determining if the connection is established or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.check_table_exist">
+<span class="sig-name descname"><span class="pre">check_table_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.check_table_exist" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if the specified table exists in the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the table exists, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To check if a table named ‘users’ exists in the database, you can call the function like this:</dt><dd><p>check_table_exist(‘users’)</p>
+</dd>
+</dl>
+<p>This will return True if the ‘users’ table exists, or False if it does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.connect">
+<span class="sig-name descname"><span class="pre">connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.connect" title="Permalink to this definition"></a></dt>
+<dd><p>Establishes a connection to the MySQL database using the provided parameters and set self parameters for connecting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A tuple containing the cursor and connection objects.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.create_schema">
+<span class="sig-name descname"><span class="pre">create_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.create_schema" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new database schema with the specified name, if it doesn’t already exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>schema_name</strong> (<em>str</em>) – The name of the schema to create.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the schema was created or already exists, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To create a schema named ‘mydb’, you can call the function like this:</dt><dd><p>create_schema(‘mydb’)</p>
+</dd>
+</dl>
+<p>This will create the ‘mydb’ schema if it doesn’t already exist.
+If the schema already exists, the function will return True without creating it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.create_table">
+<span class="sig-name descname"><span class="pre">create_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.create_table" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new table with the specified name, if it doesn’t already exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table to create.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the table was created or already exists, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To create a table named ‘users’, you can call the function like this:</dt><dd><p>create_table(‘users’)</p>
+</dd>
+</dl>
+<p>This will create the ‘users’ table with a primary key column named ‘id’ if it doesn’t already exist.
+If the table already exists, the function will return True without creating it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.delete_column">
+<span class="sig-name descname"><span class="pre">delete_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.delete_column" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes the specified column from the given table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table from which to delete the column.</p></li>
+<li><p><strong>col_name</strong> (<em>str</em>) – The name of the column to delete.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the column was successfully deleted, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To delete a column named ‘email’ from a table named ‘users’, you can call the function like this:</dt><dd><p>delete_column(‘users’, ‘email’)</p>
+</dd>
+</dl>
+<p>This will drop the ‘email’ column from the ‘users’ table and return True if successful,
+or False if there was an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.delete_table">
+<span class="sig-name descname"><span class="pre">delete_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.delete_table" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes the specified table from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table to delete.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the table was successfully deleted, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To delete a table named ‘employees’, you can call the function like this:</dt><dd><p>delete_table(‘employees’)</p>
+</dd>
+</dl>
+<p>This will drop the ‘employees’ table from the database and return True if successful,
+or False if there was an error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.get_all_content">
+<span class="sig-name descname"><span class="pre">get_all_content</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'id'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.get_all_content" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves all content from the specified table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table from which to retrieve the content.</p></li>
+<li><p><strong>limit</strong> (<em>bool</em>) – Optional. If True, limits the number of records returned by limit_size.
+Default is False.</p></li>
+<li><p><strong>limit_size</strong> (<em>int</em>) – Optional. The maximum number of records to retrieve if limit is True.
+Default is 20.</p></li>
+<li><p><strong>offset</strong> (<em>int</em>) – Optional. The number of records to skip before retrieving the content.
+Default is 0.</p></li>
+<li><p><strong>reverse_order</strong> (<em>bool</em>) – Optional. If True, retrieves the content in reverse order.
+Default is False.</p></li>
+<li><p><strong>column_order</strong> (<em>str</em>) – Optional. The name of the column used for sorting the content.
+Default is ‘id’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of dictionaries representing the content. Each dictionary contains</dt><dd><p>the field names as keys and corresponding field values as values.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To retrieve all content from a table named ‘users’, you can call the function like this:</dt><dd><p>get_all_content(‘users’)</p>
+</dd>
+</dl>
+<p>This will return a list of dictionaries representing all content in the ‘users’ table.</p>
+<p>You can specify additional parameters to limit the number of records, offset, sorting order, etc.
+For example, to retrieve the first 10 records sorted by the ‘name’ column in reverse order, you can call:</p>
+<blockquote>
+<div><p>get_all_content(‘users’, limit=True, limit_size=10, reverse_order=True, column_order=’name’)</p>
+</div></blockquote>
+<p>This will return a list of dictionaries representing the first 10 records sorted by ‘name’ column
+in reverse order from the ‘users’ table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.get_all_schemas">
+<span class="sig-name descname"><span class="pre">get_all_schemas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.get_all_schemas" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves the names of all available database schemas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of schema names.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To retrieve the names of all available schemas, you can call the function like this:</dt><dd><p>get_all_schemas()</p>
+</dd>
+</dl>
+<p>This will return a list of schema names.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.get_auto_increment_col_name">
+<span class="sig-name descname"><span class="pre">get_auto_increment_col_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.get_auto_increment_col_name" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves the column name(s) with auto-increment property from the specified table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table from which to retrieve the auto-increment column name(s).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of column name(s) with auto-increment property.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To get the auto-increment column name(s) from a table named ‘users’, you can call the function like this:</dt><dd><p>get_auto_increment_col_name(‘users’)</p>
+</dd>
+</dl>
+<p>This will return a list of column name(s) with auto-increment property in the ‘users’ table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.get_col_name">
+<span class="sig-name descname"><span class="pre">get_col_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">without_auto_incresment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.get_col_name" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves the column names of the specified table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table from which to retrieve column names.</p></li>
+<li><p><strong>without_auto_increment</strong> (<em>bool</em>) – Optional. If True, excludes the auto-increment column(s)
+from the returned list of column names. Default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of column names as strings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To get the column names of a table named ‘users’, you can call the function like this:</dt><dd><p>get_col_name(‘users’)</p>
+</dd>
+</dl>
+<p>This will return a list of column names for the ‘users’ table.</p>
+<dl class="simple">
+<dt>To exclude auto-increment columns from the returned list, you can pass True as the second argument:</dt><dd><p>get_col_name(‘users’, without_auto_increment=True)</p>
+</dd>
+</dl>
+<p>This will return a list of column names for the ‘users’ table, excluding any auto-increment columns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.get_count_table">
+<span class="sig-name descname"><span class="pre">get_count_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.get_count_table" title="Permalink to this definition"></a></dt>
+<dd><p>Get the number of rows in the specified database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>table_name</strong> (<em>str</em>) – The name of the table for which the row count is needed.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of rows in the specified table. Returns 0 if there is an error or no connection.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>mysql.connector.Error</strong> – If there’s an error while executing the query.</p>
+</dd>
+</dl>
+<p>This method retrieves the row count for the specified <cite>table_name</cite> using a SQL query. It first checks
+if there is a valid SQL connection established using the <cite>check_connection()</cite> method. If the connection
+is successful, it executes the query and fetches the result.</p>
+<p>Example usage:
+row_count = get_count_table(‘my_table’)
+print(f”The table ‘my_table’ has {row_count} rows.”)</p>
+<p>Note:
+- Make sure to handle the connection to the database and the cursor outside of this method.
+- The <cite>execute_quary</cite> method is assumed to be defined elsewhere and is responsible for executing
+the SQL query and returning the cursor object.
+- This method assumes you are using the MySQL Connector/Python library for database access.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.remove_record">
+<span class="sig-name descname"><span class="pre">remove_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.remove_record" title="Permalink to this definition"></a></dt>
+<dd><p>this function is used to remove a record from table acourding to specified column value</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><p>col_name: name of the column to check for (in string)
+value: value of the column (in string)
+table_name: name of the table (in string)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a boolean determining if the record is removed or not</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>results</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.search" title="Permalink to this definition"></a></dt>
+<dd><p>Searches the specified table for records matching the given column name and value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table to search.</p></li>
+<li><p><strong>col_name</strong> (<em>str</em>) – The name of the column to match against.</p></li>
+<li><p><strong>value</strong> (<em>Any</em>) – The value to search for. It will be converted to a string for comparison.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A list of dictionaries representing the matching records. Each dictionary contains</dt><dd><p>the field names as keys and corresponding field values as values.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>To search for all records in the table ‘employees’ where the ‘department’ column is ‘Sales’,
+you can call the function like this:</p>
+<blockquote>
+<div><p>search(‘employees’, ‘department’, ‘Sales’)</p>
+</div></blockquote>
+<p>This will return a list of dictionaries representing the matching records.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.set_log_level">
+<span class="sig-name descname"><span class="pre">set_log_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.set_log_level" title="Permalink to this definition"></a></dt>
+<dd><p>_this function used to set log level</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.show_message">
+<span class="sig-name descname"><span class="pre">show_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.show_message" title="Permalink to this definition"></a></dt>
+<dd><p>Displays an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error</strong> (<em>str</em>) – The error message to display.</p></li>
+<li><p><strong>level</strong> (<em>int</em>) – Optional. The level of the error message. Default is 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>None.</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>To display an error message “Error in SQL Connection”, you can call the function like this:</dt><dd><p>show_message(‘Error in SQL Connection’)</p>
+</dd>
+</dl>
+<p>This will print the error message to the console.</p>
+<dl class="simple">
+<dt>You can also specify a level for the error message. For example:</dt><dd><p>show_message(‘Error in SQL Connection’, level=1)</p>
+</dd>
+</dl>
+<p>This will print the error message to the console only if the log level is set to 1.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.update_record">
+<span class="sig-name descname"><span class="pre">update_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.update_record" title="Permalink to this definition"></a></dt>
+<dd><p>this function used to update a row with input parms</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><p>table_name (str): name of that table we want to change data
+col_name (str): column name of table
+value (str): new vlaue
+id_name (str): name of column for selecting the row
+id_value (str): Row specifier</p>
+</dd>
+</dl>
+<p>Returns: Flag of doing query</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dorsa_Database.dataBase.update_record_dict">
+<span class="sig-name descname"><span class="pre">update_record_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dorsa_Database.dataBase.update_record_dict" title="Permalink to this definition"></a></dt>
+<dd><p>Update records in the specified database table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the table where the records will be updated.</p></li>
+<li><p><strong>data</strong> (<em>dict</em>) – A dictionary containing the column names as keys and their corresponding values
+that need to be updated in the table.</p></li>
+<li><p><strong>id_name</strong> (<em>str</em>) – The name of the column used as the identifier for finding the records to update.</p></li>
+<li><p><strong>id_value</strong> – The value of the identifier to search for records in the table.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the records were updated successfully, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>mysql.connector.Error</strong> – If there’s an error during the update process.</p>
+</dd>
+</dl>
+<p>This method updates records in the specified MySQL database table. It first checks if there is a valid
+SQL connection established using the <cite>check_connection()</cite> method. If the connection is successful,
+the <cite>data</cite> dictionary is used to create an SQL query to update the records in the table.</p>
+<p>Example usage:
+data = {‘column1’: ‘new_value1’, ‘column2’: ‘new_value2’}
+id_name = ‘record_id’
+id_value = 123
+update_success = update_record_dict(‘my_table’, data, id_name, id_value)
+if update_success:</p>
+<blockquote>
+<div><p>print(‘Records updated successfully.’)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>print(‘Failed to update records.’)</p>
+</dd>
+</dl>
+<p>Note:
+- Make sure to handle the connection to the database and the cursor outside of this method.
+- This method assumes you are using the MySQL Connector/Python library for database access.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Milad Moltaji (milad_mlj22).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

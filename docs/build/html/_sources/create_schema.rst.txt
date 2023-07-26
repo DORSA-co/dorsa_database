@@ -1,0 +1,20 @@
+Usage
+==============================
+
+Introduction
+^^^^^^^^^^^^^^^^^^
+this function used to create schema, 
+when you create your connection if your schema there was not , code will auto create a schema
+
+Create schema
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. code-block:: python
+
+   import dorsa_Database
+   from dorsa_Database import dataBase
+
+   db = dataBase('__user_name','__password','__localhost','__schema_name__')
+
+   db.create_schema('__schema_name__')

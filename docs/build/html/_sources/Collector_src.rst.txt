@@ -10,6 +10,6 @@ Collector Class Functions
 .. autoclass:: dorsaPylon.Collector
    :members:
 
-.. currentmodule: dorsa_Database
-.. autoclass:dorsa_Database.dataBase
+.. currentmodule: dorsaPylon
+.. autoclass: dorsaPylon.Collector
    :members:

@@ -3,11 +3,7 @@ Installation
 
 Requirement
 ------------
-To use basler, first install requirement:
-
-.. code-block:: console
-
-   (.venv) $ pip install dorsa_database
+To use databse module, first install python 3.
 
 
 Install

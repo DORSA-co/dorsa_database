@@ -988,7 +988,7 @@ if __name__ == "__main__":
 
 
     db=dataBase('root','Dorsa-1400','localhost','test')
-
+    # db = dataBase('__user_name','__password','__localhost','__schema_name__')
     
     db.delete_table('users')
     db.create_table('users')   # you can dont create table

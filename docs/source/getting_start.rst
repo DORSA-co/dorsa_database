@@ -3,8 +3,8 @@ Getting start
 
 step 1: Create Database Object
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-You can manage cameras using Collector class . Use ``get_all_cameras`` function to get all connected cameras.
-for more information see chapter :doc:`manageـdeviceـbyـCollector`
+first create an object from dorsa_database with your sql username and password for create connection and set your database naem.
+if there is not schema this schema name , code will create it automatic.
 
 .. code-block:: python
 
@@ -14,6 +14,4 @@ for more information see chapter :doc:`manageـdeviceـbyـCollector`
    db=dataBase('__user_name__','__password__','__host__','__schema_name__')
 
    #-----------------------------------------------------------------
-   #get all avialble cameras 
-   all_cameras = collector.get_all_cameras(camera_class=None)
 

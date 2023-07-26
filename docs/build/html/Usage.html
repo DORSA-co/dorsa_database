@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usage &mdash; Dorsa Database 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Getting start" href="getting_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Dorsa Database
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">subjects:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_start.html">Getting start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-schema">Create Schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creaete-table">Creaete Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-all-schemas">Get all Schemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-table">Delete Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-column">Add Column</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-content-of-table">Get Content of table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-column-name">Get Column Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-record">Add Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-record-with-dictionary">Add Record with dictionary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-record">Update Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-record-with-dictionay">Update Record with Dictionay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remove-record">Remove Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#search-record">search Record</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="search.html">Search Page</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">sources:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Camera_src.html">Dtabase Functions and atribiutes</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dorsa Database</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Usage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p>In the Bible, we have given brief explanations along with example codes</p>
+</section>
+<section id="create-schema">
+<h2>Create Schema<a class="headerlink" href="#create-schema" title="Permalink to this heading"></a></h2>
+<p>this function used to create schema,
+when you create your connection if your schema there was not , code will auto create a schema</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">create_schema</span><span class="p">(</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="creaete-table">
+<h2>Creaete Table<a class="headerlink" href="#creaete-table" title="Permalink to this heading"></a></h2>
+<p>if want to create only use below function or , use add column that automatic create table
+If you repeat it again, there will be no problem.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">create_table</span><span class="p">(</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-all-schemas">
+<h2>Get all Schemas<a class="headerlink" href="#get-all-schemas" title="Permalink to this heading"></a></h2>
+<p>if want to create only use below function or , use add column that automatic create table</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">schemas</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">get_all_schemas</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">schemas</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">,</span><span class="s1">&#39;test2&#39;</span><span class="p">,</span><span class="s1">&#39;test3&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="delete-table">
+<h2>Delete Table<a class="headerlink" href="#delete-table" title="Permalink to this heading"></a></h2>
+<p>Use this function to delete the table from the database</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">delete_table</span><span class="p">(</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="add-column">
+<h2>Add Column<a class="headerlink" href="#add-column" title="Permalink to this heading"></a></h2>
+<p>Use this function to add a column to the table you want and enter the required items including: length - type - default, etc.
+If you repeat it again, there will be no problem.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">,</span><span class="n">col_name</span><span class="o">=</span><span class="s1">&#39;__column_name__&#39;</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;VARCHAR or INT or etc&#39;</span><span class="p">,</span><span class="nb">len</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Null</span><span class="o">=</span><span class="n">NOT_NULL</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-content-of-table">
+<h2>Get Content of table<a class="headerlink" href="#get-content-of-table" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Retrieves all content from the specified table.</p>
+<blockquote>
+<div><dl>
+<dt>Args:</dt><dd><p>table_name (str): The name of the table from which to retrieve the content.
+limit (bool): Optional. If True, limits the number of records returned by limit_size.</p>
+<blockquote>
+<div><p>Default is False.</p>
+</div></blockquote>
+<dl class="simple">
+<dt>limit_size (int): Optional. The maximum number of records to retrieve if limit is True.</dt><dd><p>Default is 20.</p>
+</dd>
+<dt>offset (int): Optional. The number of records to skip before retrieving the content.</dt><dd><p>Default is 0.</p>
+</dd>
+<dt>reverse_order (bool): Optional. If True, retrieves the content in reverse order.</dt><dd><p>Default is False.</p>
+</dd>
+<dt>column_order (str): Optional. The name of the column used for sorting the content.</dt><dd><p>Default is ‘id’.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>list: A list of dictionaries representing the content. Each dictionary contains</dt><dd><p>the field names as keys and corresponding field values as values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">content</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">delete_table</span><span class="p">(</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-column-name">
+<h2>Get Column Name<a class="headerlink" href="#get-column-name" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Retrieves the column names of the specified table.</p>
+<dl>
+<dt>Args:</dt><dd><p>table_name (str): The name of the table from which to retrieve column names.
+without_auto_increment (bool): Optional. If True, excludes the auto-increment column(s)</p>
+<blockquote>
+<div><p>from the returned list of column names. Default is False.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>list: A list of column names as strings.</p>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">get_col_name</span><span class="p">(</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="add-record">
+<h2>Add Record<a class="headerlink" href="#add-record" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>this function is used to add a new record to table</p>
+<dl class="simple">
+<dt>Inputs:</dt><dd><p>table_name : name of table
+data: data that want to add to the database</p>
+</dd>
+</dl>
+<p>Returns: Flag of doing query</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">add_column</span><span class="p">(</span><span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">,</span><span class="n">col_name</span><span class="o">=</span><span class="s1">&#39;__column_name__&#39;</span><span class="p">,</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;VARCHAR or INT or etc&#39;</span><span class="p">,</span><span class="nb">len</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">Null</span><span class="o">=</span><span class="n">NOT_NULL</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="add-record-with-dictionary">
+<h2>Add Record with dictionary<a class="headerlink" href="#add-record-with-dictionary" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Add a new record to the specified database table using a dictionary of column-value pairs.</p>
+<dl>
+<dt>Parameters:</dt><dd><p>table_name (str): The name of the table where the record will be added.
+data (dict): A dictionary containing column names as keys and their corresponding values</p>
+<blockquote>
+<div><p>for the new record to be inserted into the table.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>None</p>
+</dd>
+</dl>
+<p>This method takes the input <cite>data</cite> dictionary, extracts the values corresponding to the columns
+of the specified <cite>table_name</cite>, and then adds a new record to the table using the <cite>add_record</cite> method.</p>
+<p>The <cite>add_record</cite> method is assumed to be defined elsewhere and is responsible for executing the
+actual database insertion operation.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span><span class="s1">&#39;milad&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">:</span><span class="s1">&#39;m.moltaji&#39;</span><span class="p">,</span><span class="s1">&#39;last_name&#39;</span><span class="p">:</span><span class="s1">&#39;moltaji&#39;</span><span class="p">}</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">add_record_dict</span><span class="p">(</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="update-record">
+<h2>Update Record<a class="headerlink" href="#update-record" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>this function used to update a row with input parms</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Inputs:</dt><dd><p>table_name (str): name of that table we want to change data
+col_name (str): column name of table
+value (str): new vlaue
+id_name (str): name of column for selecting the row
+id_value (str): Row specifier</p>
+</dd>
+</dl>
+<p>Returns: Flag of doing query</p>
+</div></blockquote>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">update_record</span><span class="p">(</span><span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">,</span><span class="n">col_name</span><span class="o">=</span><span class="s1">&#39;__column_name__&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;__new_value__&#39;</span><span class="p">,</span><span class="n">id_name</span><span class="o">=</span><span class="s1">&#39;__name_of_column__&#39;</span><span class="p">,</span><span class="n">id_value</span><span class="o">=</span><span class="s1">&#39;__name_of_row__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="update-record-with-dictionay">
+<h2>Update Record with Dictionay<a class="headerlink" href="#update-record-with-dictionay" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>like update record just with a dictionay for multi updates</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">edit_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span><span class="s1">&#39;amir&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">:</span><span class="s1">&#39;amir.malek&#39;</span><span class="p">}</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">update_record_dict</span><span class="p">(</span><span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">edit_data</span><span class="p">,</span><span class="n">id_name</span><span class="o">=</span><span class="s1">&#39;__name_of_column__&#39;</span><span class="p">,</span><span class="n">id_value</span><span class="o">=</span><span class="s1">&#39;__name_of_row__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="remove-record">
+<h2>Remove Record<a class="headerlink" href="#remove-record" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>for remove of specifc row with column name and its value</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">edit_data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span><span class="s1">&#39;amir&#39;</span><span class="p">,</span><span class="s1">&#39;email&#39;</span><span class="p">:</span><span class="s1">&#39;amir.malek&#39;</span><span class="p">}</span>
+
+<span class="n">db</span><span class="o">.</span><span class="n">remove_record</span><span class="p">(</span><span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">,</span><span class="n">col_name</span><span class="o">=</span><span class="s1">&#39;__column_name__&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;__value_of_row__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="search-record">
+<h2>search Record<a class="headerlink" href="#search-record" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p>Searches the specified table for records matching the given column name and value.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>table_name (str): The name of the table to search.
+col_name (str): The name of the column to match against.
+value (Any): The value to search for. It will be converted to a string for comparison.</p>
+</dd>
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>list: A list of dictionaries representing the matching records. Each dictionary contains</dt><dd><p>the field names as keys and corresponding field values as values.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">dorsa_Database</span>
+<span class="kn">from</span> <span class="nn">dorsa_Database</span> <span class="kn">import</span> <span class="n">dataBase</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataBase</span><span class="p">(</span><span class="s1">&#39;__user_name&#39;</span><span class="p">,</span><span class="s1">&#39;__password&#39;</span><span class="p">,</span><span class="s1">&#39;__localhost&#39;</span><span class="p">,</span><span class="s1">&#39;__schema_name__&#39;</span><span class="p">)</span>
+
+<span class="n">search</span><span class="o">=</span><span class="n">db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">table_name</span><span class="o">=</span><span class="s1">&#39;__table_name__&#39;</span><span class="p">,</span><span class="n">col_name</span><span class="o">=</span><span class="s1">&#39;__column_name__&#39;</span><span class="p">,</span><span class="n">value</span><span class="o">=</span><span class="s1">&#39;__value_of_you_want__&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_start.html" class="btn btn-neutral float-left" title="Getting start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Milad Moltaji (milad_mlj22).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
